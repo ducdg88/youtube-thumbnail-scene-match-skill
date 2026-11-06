@@ -1,0 +1,108 @@
+{
+  "profile_id": "giant-log-transport-no-text",
+  "profile_source": "Yêu cầu sáng tạo được tổng hợp từ phiên làm việc, không chứa dữ liệu nhận dạng kênh",
+  "target_audience": "international",
+  "thumbnail": {
+    "aspect_ratio": "16:9",
+    "batch_default": 4,
+    "batch_allowed": [
+      3,
+      4,
+      5
+    ],
+    "all_visible_text_prohibited": true,
+    "prohibited_on_image": [
+      "title",
+      "subtitle",
+      "caption",
+      "letters",
+      "numbers",
+      "measurements",
+      "arrows",
+      "labels",
+      "stickers",
+      "brand logo",
+      "watermark",
+      "channel mark",
+      "readable vehicle plates",
+      "readable signs",
+      "infographic panel",
+      "collage grid"
+    ],
+    "use_visual_storytelling_only": true,
+    "presentation": "photorealistic, cinematic, striking but physically coherent",
+    "preserve_reference_log": [
+      "front cross-section shape",
+      "existing cracks and natural end grain",
+      "dark rough bark",
+      "brown weathered wood hues",
+      "asymmetric irregular trunk silhouette"
+    ],
+    "required_scene": [
+      "single enormous tree trunk is actually RESTING ON the trailer",
+      "heavy-duty towing truck visibly connected",
+      "long multi-axle lowboy or modular transport trailer visible",
+      "adequate stabilizing saddles and restraints",
+      "small humans/architecture/wheels for scale"
+    ],
+    "not_allowed": [
+      "isolated log or wood slab without a transporting truck",
+      "log still suspended in midair while described as being transported",
+      "truck cab/trailer entirely hidden",
+      "implausible load geometry",
+      "vivid artificial rainbow end grain not present in the reference",
+      "fake dimension/age/weight claims on log",
+      "template changes that are merely recrops/recolors"
+    ],
+    "size_amplification": {
+      "editable_by_future_user_request": true,
+      "default_level": 3,
+      "allowed_levels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "interpretation": {
+        "1": "giữ gần kích thước tham chiếu",
+        "2": "to hơn nhẹ",
+        "3": "rất to / thumbnail mạnh",
+        "4": "siêu khổng lồ",
+        "5": "cực đại nhưng vẫn hợp lý về vật lý"
+      },
+      "preferred_methods": [
+        "góc máy thấp",
+        "kéo dài phối cảnh",
+        "tăng chênh lệch giữa gốc cây và công nhân/bánh xe/cabin",
+        "mở rộng số trục và chiều dài đoàn xe một cách hợp lý"
+      ],
+      "never_do": [
+        "đổi log thành hình dạng khác",
+        "thêm số đo giả",
+        "làm xe biến mất",
+        "tạo kết cấu không còn giống ảnh gốc"
+      ]
+    }
+  },
+  "story_goal": "Người xem quốc tế nhận ngay đây là một khúc gỗ khổng lồ thực sự được xe siêu trường siêu trọng vận chuyển; cảm nhận quy mô, sức nặng và tò mò về công đoạn xưởng gỗ tiếp theo.",
+  "scene_match": {
+    "thumbnail_first": true,
+    "video_contains_a_meaningfully_matching_scene": true,
+    "single_static_insertion_not_sufficient_proof_of_originality": true,
+    "no_video_means_pending_not_pass": true
+  },
+  "privacy": {
+    "temporary_local_previews_expire_in_hours": 5,
+    "never_delete_user_source_or_approved_exports": true,
+    "remote_platform_deletion_not_guaranteed": true
+  },
+  "profile_version": "2.3.0",
+  "feedback_learning": {
+    "on_user_selection_or_revision": true,
+    "record_issues_and_choice": true,
+    "adapt_next_run_without_repeating_templates": true,
+    "preserve_no_text_and_scene_match_hard_constraints": true,
+    "requires_feedback_file_for_cross_session_learning": true
+  }
+}

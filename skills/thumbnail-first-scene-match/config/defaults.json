@@ -1,0 +1,96 @@
+{
+  "skill_version": "2.3.0",
+  "profile": "profile/creative_profile.json",
+  "profile_brief": "profile/SESSION_CREATIVE_BRIEF.md",
+  "audience": "international",
+  "thumbnail_text_mode": "none",
+  "allow_text_on_image": false,
+  "allow_logo_or_watermark": false,
+  "allow_dimensions_or_technical_labels": false,
+  "label_concepts_outside_images_only": true,
+  "batch_size_default": 4,
+  "batch_size_min": 3,
+  "batch_size_max": 5,
+  "aspect_ratio": "16:9",
+  "delivery_format": "individual_images_not_collage",
+  "reference_subject_lock": true,
+  "giant_log_scale": "extreme_visual_scale_without_fabricated_measurements",
+  "transport_scene_requires_truck_carrying_log": true,
+  "require_visible_connected_tractor_and_multi_axle_trailer": true,
+  "forbid_suspended_log_as_transport_result": true,
+  "require_plausible_secure_log_support": true,
+  "preview_ttl_hours": 5,
+  "preview_cleanup_interval_minutes": 5,
+  "managed_previews_only": true,
+  "delete_originals": false,
+  "delete_final_video": false,
+  "delete_remote_chat_assets": false,
+  "scene_match_required": true,
+  "video_missing_status": "SCENE_MATCH_PENDING",
+  "realistic_ai_content_disclosure_review": true,
+  "uniqueness_minimum_real_changes": 3,
+  "distinct_story_and_camera_required": true,
+  "manual_no_text_visual_qc_required": true,
+  "size_amplification": {
+    "enabled": true,
+    "default_level": 3,
+    "allowed_levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "level_meaning": {
+      "1": "realistic_reference_scale",
+      "2": "slightly_larger_than_reference",
+      "3": "very_large_but_plausible",
+      "4": "extreme_thumbnail_exaggeration",
+      "5": "maximum_monumental_exaggeration_still_physically_coherent"
+    },
+    "user_prompt_examples": [
+      "làm cây to hơn",
+      "phóng đại kích thước hơn nữa",
+      "cực kỳ khổng lồ",
+      "hãy tăng scale lên level 4",
+      "giữ nguyên concept nhưng cho thân cây lớn hơn"
+    ],
+    "hard_rules": [
+      "preserve original log identity",
+      "truck must still plausibly carry the load",
+      "use perspective and scale references before inventing impossible geometry",
+      "do not add fake measurements or age claims"
+    ]
+  },
+  "automatic_activation": {
+    "requires_install_and_enable": true,
+    "trigger_phrases": [
+      "thumbnail YouTube",
+      "ảnh bìa",
+      "cho xe chở gốc cây",
+      "tạo 3-5 thumbnail",
+      "phóng đại cây gỗ",
+      "scale level 5",
+      "scene match"
+    ],
+    "attachment_alone_installs_skill": false,
+    "feedback_comment_triggers_recording": true
+  },
+  "feedback_loop": {
+    "enabled": true,
+    "capture_explicit_user_feedback_only": true,
+    "allowed_decisions": [
+      "selected",
+      "rejected",
+      "revise",
+      "published"
+    ],
+    "user_scale_override_wins": true,
+    "never_override_hard_rules": true,
+    "state_env_var": "THUMBNAIL_FEEDBACK_FILE",
+    "state_default": "~/.thumbnail_first_scene_match/feedback/feedback.json",
+    "state_separate_from_expiring_preview_vault": true,
+    "cross_session_persistence_requires_durable_storage": true,
+    "automatic_background_training": false
+  }
+}

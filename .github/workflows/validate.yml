@@ -1,0 +1,29 @@
+name: validate
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Compile scripts
+        run: python -m compileall -q skills/thumbnail-first-scene-match/scripts
+      - name: JSON parses
+        run: for f in skills/thumbnail-first-scene-match/config/*.json skills/thumbnail-first-scene-match/profile/*.json skills/thumbnail-first-scene-match/templates/*.json; do python -m json.tool "$f" > /dev/null; done
+      - name: Tests
+        env:
+          THUMBNAIL_VAULT_DIR: /tmp/vault
+          THUMBNAIL_FEEDBACK_FILE: /tmp/feedback/feedback.json
+        run: |
+          python skills/thumbnail-first-scene-match/tests/test_skill_contract.py
+          python skills/thumbnail-first-scene-match/tests/test_preview_vault.py
+          python skills/thumbnail-first-scene-match/tests/test_feedback_loop.py
+      - name: batch_qc on four sample images
+        run: |
+          python -c "from PIL import Image; [Image.new('RGB',(1280,720),c).save('/tmp/'+n+'.png') for n,c in zip('ABCD',['red','blue','green','gray'])]"
+          python skills/thumbnail-first-scene-match/scripts/batch_qc.py /tmp/A.png /tmp/B.png /tmp/C.png /tmp/D.png

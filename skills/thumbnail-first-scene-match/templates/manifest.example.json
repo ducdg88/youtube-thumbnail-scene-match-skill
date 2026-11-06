@@ -1,0 +1,63 @@
+{
+  "job_id": "giant-log-transport-example",
+  "source_photo": "USER_PROVIDED_REFERENCE_PATH",
+  "source_rights": "VERIFY_USER_RIGHTS",
+  "target_audience": "international",
+  "batch_size": 4,
+  "aspect_ratio": "16:9",
+  "image_text_policy": "NO_TEXT_NO_LOGO_NO_MARKINGS",
+  "scene_mode": "giant_log_is_carried_by_connected_truck_and_multi_axle_trailer",
+  "concepts": [
+    {
+      "id": "A",
+      "story": "monumental_end_grain_while_truck_carries",
+      "camera": "rear_low_three_quarter",
+      "thumbnail_file": "thumbnails/A.png",
+      "no_text_visual_qc": "PENDING_REVIEW",
+      "carrier_visual_qc": "PENDING_REVIEW",
+      "scene_match_status": "SCENE_MATCH_PENDING"
+    },
+    {
+      "id": "B",
+      "story": "full_convoy_arrives_at_sawmill",
+      "camera": "wide_elevated_three_quarter",
+      "thumbnail_file": "thumbnails/B.png",
+      "no_text_visual_qc": "PENDING_REVIEW",
+      "carrier_visual_qc": "PENDING_REVIEW",
+      "scene_match_status": "SCENE_MATCH_PENDING"
+    },
+    {
+      "id": "C",
+      "story": "engineering_challenge_slow_turn",
+      "camera": "low_side_profile",
+      "thumbnail_file": "thumbnails/C.png",
+      "no_text_visual_qc": "PENDING_REVIEW",
+      "carrier_visual_qc": "PENDING_REVIEW",
+      "scene_match_status": "SCENE_MATCH_PENDING"
+    },
+    {
+      "id": "D",
+      "story": "tractor_maneuvering_factory_gate",
+      "camera": "front_diagonal",
+      "thumbnail_file": "thumbnails/D.png",
+      "no_text_visual_qc": "PENDING_REVIEW",
+      "carrier_visual_qc": "PENDING_REVIEW",
+      "scene_match_status": "SCENE_MATCH_PENDING"
+    }
+  ],
+  "video_available": false,
+  "claim_is_real_documentary_footage": false,
+  "provenance": "AI_RECONSTRUCTION_IF_SCENE_NOT_IN_SOURCE_VIDEO",
+  "retention": {
+    "local_preview_ttl_hours": 5,
+    "auto_cleanup_scheduler_must_be_installed": true,
+    "remote_chat_deletion_supported": false
+  },
+  "skill_version": "2.3.0",
+  "size_amplification_level": 3,
+  "feedback_loop": {
+    "state": "~/.thumbnail_first_scene_match/feedback/feedback.json",
+    "feedback_collected": false,
+    "next_batch_adaptations_pending": true
+  }
+}
